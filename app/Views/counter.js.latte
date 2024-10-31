@@ -1,0 +1,14 @@
+<script>
+    (function() {
+        "use strict";
+
+        var pvcHttpRequest = new XMLHttpRequest();
+
+        if ( !pvcHttpRequest )
+            return false;
+
+        pvcHttpRequest.open('POST', {$ajax_url});
+        pvcHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        pvcHttpRequest.send('postId={$post_id}&siteId={$site_id}');
+    }());
+</script>
